@@ -1,0 +1,270 @@
+.production
+  width: 100%
+  .section-heading
+    display: none
+  .production-subsection
+    display: flex
+    flex-direction: column
+    max-width: 1920px
+    min-height: 409px
+    background: url(../img/production/prod-bg.png) no-repeat center
+    color: #ffffff
+    text-align: center
+    @include push--ends(auto)
+    @include push--sides(auto)
+    z-index: 2
+    .production-overlay
+      position: absolute
+      display: block
+      content: ''
+      width: 100%
+      min-height: 409px
+      background: rgba(0, 0, 0, .6)
+      z-index: 0
+    .production-subsection__title
+      font-size: 32px
+      font-weight: 400
+      line-height: 35px
+      margin-top: 65px
+      z-index: 2
+      @include mq($until: mobile-wide)
+        font-size: 20px
+        font-weight: 700
+        line-height: 24px
+    .production-subsection__subtitle
+      font-size: 26px
+      z-index: 2
+      margin-bottom: 32px
+      @include mq($until: mobile-wide)
+        font-size: 16px
+    form
+      display: flex
+      flex-direction: column
+      z-index: 2
+      label
+        font-family: $roboto-light
+        font-size: 20px
+      .production-form__tel
+        display: flex
+        width: 365px
+        height: 56px
+        border-radius: 5px
+        margin-bottom: 12px
+        text-align: center
+        border: none
+        @include mq($until: mobile-wide)
+          width: 290px
+      .production-form__tel::placeholder
+        color: $main-text-color
+        font-family: $roboto-light
+        font-size: 14px
+        font-weight: 300
+        line-height: 42px
+        text-align: center
+      .button
+        width: 180px
+        margin-bottom: 10px
+        padding: 17px 22px;
+        @include push--sides(auto)
+      .button:hover
+        background: lighten($main-yellow, 10)
+    .production-form__asterisk
+      font-family: "Roboto-Light", sans-serif
+      font-size: 14px
+      font-weight: 300
+      line-height: 30px
+      color: #ffffff
+      margin-top: -10px
+      margin-bottom: 0
+      z-index: 2
+  .production-slider
+    display: flex
+    min-height: 630px
+    z-index: 5
+    padding:
+      top: 87px
+      bottom: 95px
+    @include mq($until: desktop)
+      padding-top: 30px
+      padding-bottom: 30px
+    @include mq($until: desktop)
+      flex-direction: column-reverse
+    .sliders
+      margin-right: 0
+      @include mq($until: desktop)
+        @include push--sides(auto)
+
+      @include mq($until: tablet)
+        @include push--sides(auto)
+      @include mq($until: mobile-wide)
+        width: 100%
+        @include push--sides(auto)
+      .slider-top, .slider-bottom
+        max-width: 540px
+        height: auto
+        margin-right: 0
+        @include mq($until: desktop)
+      .slider-top
+        margin: 
+          left: 0
+          right: 0
+        .slider-arrow
+          height: 78px
+          @include mq($until: desktop)
+            position: absolute
+            top: 40%
+            z-index: 99
+            height: 25%
+            width: 22px
+        .slider-arrow__left
+          background: $main-yellow url(../img/slider/arrow-left-active.png) no-repeat center 
+          position: absolute
+          left: 0
+          transform: rotate(180deg)
+        .slider-arrow__right
+          background: $main-yellow url(../img/slider/arrow-right-active.png) no-repeat center 
+          position: absolute
+          right: 0
+          transform: rotate(360deg)
+        div
+          div
+            img
+              width: 535px
+              @include mq($until: mobile-wide)
+                height: auto
+              @include mq($from: mobile-wide)
+                height: 377px
+                padding-bottom: 13px
+        div
+          max-height: 450px
+
+        @include mq($until: desktop)
+          width: 95%
+          @include push--sides(auto)
+        @include mq($until: mobile-wide)
+          width: 95%
+          @include push--sides(auto)
+      .slider-bottom
+        padding-right: 30px
+        padding-left: 25px
+        
+        @include mq($until: desktop)
+          display: none
+        @include push--sides(auto)
+        @include mq($until: desktop)
+          width: 95%
+          @include push--sides(auto)
+        div
+          div
+            img
+              width: 106px
+              height: 78px
+          
+        div
+          margin: 0 2.5px
+        
+        .slick-active
+          filter: brightness(40%)
+        .slick-current
+          filter: brightness(100%)
+        .slick-cloned, .slick-current, .slick-active
+          width: 106px
+      .slider-arrow
+        height: 78px
+        @include mq($until: mobile-wide)
+          position: absolute
+          top: 35%
+          z-index: 99
+          height: 25%
+          width: 22px
+            
+      .slider-arrow__left 
+        display: block
+        background: #fff url(../img/slider/arrow-left.png) no-repeat center 
+        position: absolute
+        top: 0
+        left: -2px
+        width: 20px
+        border: 1px solid $main-yellow
+        z-index: 2
+      .slider-arrow__left:hover
+        background: $main-yellow url(../img/slider/arrow-left-active.png) no-repeat center
+        transform: rotate(180deg)
+      .slider-arrow__right   
+        display: block
+        background: #fff url(../img/slider/arrow-left.png) no-repeat center
+        position: absolute
+        top: 0
+        right: -2px
+        width: 20px
+        border: 1px solid $main-yellow
+        transform: rotate(180deg)
+      .slider-arrow__right:hover
+        background: $main-yellow url(../img/slider/arrow-left-active.png) no-repeat center
+        transform: rotate(360deg)
+        
+  .production-text
+    margin-left: 0
+    min-width: 300px
+    @include mq($until: desktop)
+      width: 100%
+    &_p
+      display: block
+      text-align: justify
+      margin: inherit
+      font-family: $roboto-light
+      @include mq($until: desktop)
+        text-align-last: center
+    &__title
+      background: $main-yellow
+      margin:
+        top: 20px
+        left: 0
+      width: 100%
+      height: 60px
+      text-align: left
+      padding-left: 25px
+      font-family: $roboto-light
+      @include mq($until: mobile-wide)
+        margin-top: 0
+        padding-left: 0
+        font-family: $roboto-bold
+      @include mq($until: desktop)
+        display: flex
+        width: 100%
+      .desc
+        color: #ffffff
+        font-size: 28px
+        font-family: $roboto-light
+        @include mq($until: desktop)
+          font-size: 20px
+        font-weight: 400
+        line-height: 60px
+        @include mq($until: desktop)
+          text-transform: uppercase
+          font-family: $roboto-bold
+          @include push--sides(auto)
+          text-align: center
+    &__descr
+      width: 379px
+      max-height: 304px
+      color: $main-text-color
+      font-family: $roboto-light
+      @include mq($until: tablet)
+        font-size: 14px
+      font-size: 16px
+      @inlcude mq($until: tablet)
+        font-size: 14px
+      font-weight: 300
+      line-height: 24px
+      text-align: justify
+      padding-left: 20px
+      margin-left: 0
+      margin-top: 20px
+      margin-bottom: 20px
+      @include mq($until: desktop)
+        @include push--sides(30)
+        margin-top: 17px
+        margin-bottom: 20px
+        width: 95%
+        height: 100%

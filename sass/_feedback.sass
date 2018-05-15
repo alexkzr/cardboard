@@ -1,0 +1,97 @@
+.feedback
+  height: 570px
+  background-color: #f4f4f4
+  padding: 55px 0
+  &-slider
+    width: 82%
+    @include mq($until: wide)
+      width: 60%
+    @include mq($until: desktop)
+      width: 40%
+    @include mq($until: tablet)
+      width: 95%
+    div
+      div
+        display: flex
+        img
+          height: 377px
+          width: 277px !important
+          @include push--sides(auto)
+  
+  .section__heading
+    margin-top: 0
+    @include mq($until: mobile-wide)
+      width: 80%
+  .section_line
+    width: 46px
+    margin-left: 47%
+    margin-bottom: 30px
+    border: none
+.feedback-container
+  @include mq($until: tablet)
+    max-width: 330px
+  .slick-current, .slick-active
+    @include push--sides(15px)
+    width: 277px !important
+
+.slider-arrow 
+  position: absolute
+  top: 0
+  z-index: 3
+  height: 100%
+  width: 22px
+  border: 1px solid #ff9d00
+.feed-close
+  position: absolute
+  top: 5px
+  right: 5px
+.feedback img 
+  border: 1px solid #dbdbdb
+  border-radius: 5px
+  margin: 0 auto
+.feedback-slider__image:focus 
+  outline: none 
+.slider-feed 
+    top: 35%
+    position: absolute
+    z-index: 3
+    height: 25%
+    width: 22px 
+    padding-bottom: 30px
+    @include mq($until: tablet)
+      left: 254px
+.slider-feed:hover 
+  cursor: pointer 
+.slider-feed_right
+  background: url(../img/feedback/feedback-arrow-left.png) center no-repeat  
+  right: 5px
+  @include mq($from: tablet)
+    right: -25px
+  transform: rotate(180deg)
+  border: none
+  @include mq($until: tablet)
+    background: url(../img/slider/arrow-right-active.png) center no-repeat 
+    transform: rotate(360deg)
+    background-color: $main-yellow
+    border: 1px solid $main-yellow
+
+.slider-feed_left 
+  background: url(../img/feedback/feedback-arrow-left.png) center no-repeat  
+  left: -5px
+  @include mq($from: tablet)
+    left: -15px
+  transform: rotate(360deg)
+  border: none
+  @include mq($until: tablet)
+    transform: rotate(180deg)
+    background: url(../img/slider/arrow-left-active.png) center no-repeat  
+    background-color: $main-yellow
+    border: 1px solid $main-yellow
+    left: 17px
+  @include mq($until: mobile-330)
+    left: 23px
+
+.feedback-popup
+  img
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;

@@ -1,0 +1,43 @@
+.menu
+  display: none
+  color: #fff
+
+.nav-top
+  position: fixed
+  top: 0
+  display: flex
+  width: 100%
+  height: 44px
+  background-color: #1b1b1b
+  color: #ffffff
+  z-index: 999
+  @include mq($until: desktop)
+    position: block
+    display: none
+  ul
+    display: flex
+    justify-content: space-between
+    @include push--ends(auto)
+    li:not(:last-child)
+      border-right: 1px dotted #ffffff
+    li
+      list-style: none
+      text-transform: uppercase
+      @include soft--sides(15px)  
+      @include mq($until: wide)
+        @include soft--sides(10px)  
+      line-height: 44px
+      height: 24px
+      @include mq($from: wide)
+        padding-left: 20px 
+        padding-right: 25px
+        margin: 0
+      a
+        display: block
+        margin-top: -10px
+        text-decoration: none
+        color: #ffffff
+        text-transform: uppercase
+        text-align: center
+    li:hover
+      background: lighten(#1b1b1b, 30)

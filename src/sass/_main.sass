@@ -1,0 +1,179 @@
+.fadein  
+  position: relative 
+  clear: both
+  overflow: hidden
+.fadein img  
+  position: absolute 
+  left: 0 
+  top: 0 
+
+@keyframes fade 
+  0%    
+    opacity: 0 
+  100%  
+    opacity: 1
+/*.slide
+    opacity: 0 
+    animation-name: fade 
+    animation-duration: 7s 
+    animation-iteration-count: infinite 
+    position:absolute 
+    left: 0 
+    right: 0 */
+.main-slider:nth-child(1) 
+  animation-delay: 10s
+.main-slider:nth-child(2)
+  animation-delay: 10s
+.main-double
+  background: #373737 url(../img/main-bg-double.png) no-repeat center 
+  background-size: cover
+.main
+  background: #373737 url(../img/main/main-bg.png) no-repeat center 
+  background-size: cover
+.hidden
+  display: none
+.main, .main-double
+  position: relative
+  padding-top: 65px
+  padding-bottom: 60px
+  min-height: 530px
+  color: #ffffff
+  z-index: 2
+  /*затемнение фона главной картинки*/
+  &::before
+    position: absolute
+    display: block
+    content: ''
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, .6)
+    z-index: 0
+  /*добавляем кружок на задний фон с помощью псевдоэлементов*/ 
+
+
+  &-img
+    position: relative
+    margin-left: -20px
+    &::after
+      position: absolute
+      content: ''
+      background: url(../img/main/RST.png) no-repeat center
+      background-size: cover
+      width: 60px
+      height: 50px
+      left: 88px
+      bottom: -10px
+    &::before
+      position: absolute
+      content: ''
+      width: 390px
+      height: 390px
+      left: 50%
+      margin-left: -195px
+      border: 1px solid #ffffff 
+      z-index: -1
+      border-radius: 50%
+  &-text
+    padding-bottom: 20px
+    &__title
+      font-family: 'Roboto-Bold'
+      font-size: 41px
+      font-weight: 700
+      @include mq($until: desktop)
+        text-align: center
+    &__subtitle
+      font-family: 'Roboto-Regular'
+      font-size: 28px
+      font-weight: 300
+      @include mq($until: desktop)
+        text-align: center
+      // line-height: 42px
+  &-form
+    padding: 30px
+    background: rgba(255, 255, 255, 0.2)
+    margin-left: 0
+    margin-right: 0
+    border-radius: 3px
+  
+    form
+      display: flex
+      justify-content: space-between
+    
+    &__tel
+      margin-right: 0
+      border-radius: 5px  
+
+      padding: 15px 0 16px
+      @include mq($until: tablet)
+        padding: 11px 0 13px
+
+      font-family: 'Roboto-Regular', sans-serif
+      border: 0px solid transparent
+      vertical-align: middle
+      flex-basis: 60%
+      @include mq($until: desktop)
+        text-align: center
+    &__tel::placeholder
+      font-family: "Roboto-Regular", sans-serif
+      padding-left: 20px
+    &__tel:focus::placeholder 
+      opacity: 0 
+      transition: opacity 0.3s ease
+    .button
+      padding: 12px 42px
+      border-radius: 5px
+      background: $main-yellow
+      border: 0 solid transparent
+      font-family: "Roboto-Regular"
+      font-size: 15px
+      font-weight: 500
+      line-height: 22px
+      color: #ffffff
+    .button-big
+      padding-top: 20px
+      padding-bottom: 20px
+      vertical-align: middle
+      // margin-right: 27px
+      margin-left: 0
+      &:hover
+        background-color: lighten($main-yellow, 5)
+
+    &__asterisk
+      font-family: "Roboto-Light", sans-serif
+      font-size: 14px
+      font-weight: 300
+      line-height: 30px
+      color: #ffffff
+      margin-left: 20px
+      margin-bottom: 0
+    &__heading
+      color: #ffffff
+      font-family: 'Roboto-Light', sans-serif
+      font-size: 20px
+      font-weight: 300
+      line-height: 35px
+      margin: 0
+      padding-bottom: 20px
+      @include mq($from: desktop)
+        padding-right: 50px
+      .bold
+        display: block
+        font-family: 'Roboto-Regular', sans-serif
+        text-transform: uppercase
+        font-weight: 700
+@keyframes slideUp 
+  from 
+    opacity: 0
+    margin-bottom: -500px
+    transform: rotateY(90deg)   
+  to 
+    opacity: 1
+    margin-bottom: 0  
+      
+
+.animation
+  animation-name: slideUp
+  animation-delay: .4s
+  animation-duration: 1s 

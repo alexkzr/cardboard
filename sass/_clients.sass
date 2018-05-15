@@ -1,0 +1,126 @@
+.clients-container
+  display: flex
+  flex-wrap: wrap
+  flex-direction: column
+  background: #ffffff
+  text-align: center
+  padding-bottom: 66px
+  @include mq($until: mobile-wide)
+  padding-bottom: 28px
+  .clients-cont
+    display: flex
+    flex-direction: column
+    @inlcude mq($from: mobile-wide)
+      margin-top: -98px;
+    .section__heading
+      margin-top: 0
+  .row1, .row2, .row3, .row4
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    margin-bottom: 30px
+  .row1 
+    
+      margin-top: 15px
+      margin-bottom: 2.5px
+  .row2, .row3, .row4
+    
+      margin-top: 2.5px
+      margin-bottom: 2.5px
+  .section__heading
+    @include mq($until: mobile-wide)
+      margin-top: 30px
+  .client1, .client2, .client3, .client4, .client5, .client6, .client7, .client8, .client9, .client10, .client11, .client12
+    border-radius: 5px
+    display: flex
+    width: 212px
+    height: 130px
+    border: 1px solid rgba(0, 0, 0, 0.1)
+    padding: 15px
+    margin: 5px
+    @include mq($until: desktop)
+      flex-basis: 20%
+      width: 212px
+      @include push--auto
+      flex-basis: 45%
+      width: 212px
+      margin: 5px
+    @include mq($until: mobile-wide)
+      width: 143px
+
+  .client
+    @include mq($until: mobile-wide)
+      background-size: contain !important
+    @include mq($until: desktop)
+      background-size: auto
+  .client1
+    background: #ffffff url(../img/clients/client1bw.png) center no-repeat
+    @include mq($until: desktop)
+      background: #ffffff url(../img/clients/client1col.png) no-repeat center
+      background-size: 70% auto !important
+  .client2
+    background: #ffffff url(../img/clients/client2bw.png) center no-repeat
+    @include mq($until: desktop)
+      background: #ffffff url(../img/clients/client2col.png) no-repeat center   
+  .client3
+    background: #ffffff url(../img/clients/client3bw.png) center no-repeat
+    @include mq($until: desktop)
+      background: #ffffff url(../img/clients/client3col.png) no-repeat center
+      background-size: 70% auto !important
+  .client4
+    background: #ffffff url(../img/clients/client4bw.png) center no-repeat
+    @include mq($until: desktop)
+      background: #ffffff url(../img/clients/client4col.png) no-repeat center
+      background-size: 65% auto !important
+
+  .client5
+    background: #ffffff url(../img/clients/client5bw.png) center no-repeat
+    @include mq($until: desktop)
+      background: #ffffff url(../img/clients/client5col.png) no-repeat center
+      background-size: 70% auto !important
+    @include mq($from: tablet)
+  .client6
+    background: #ffffff url(../img/clients/client6bw.png) center no-repeat
+    @include mq($until: desktop)
+      background: #ffffff url(../img/clients/client6col.png) no-repeat center
+      background-size: 90% auto !important
+  .client7
+    background: #ffffff url(../img/clients/client7bw.png) center no-repeat
+    @include mq($until: desktop)
+      background: #ffffff url(../img/clients/client7col.png) no-repeat center
+      background-size: 70% auto !important
+  .client8
+    background: #ffffff url(../img/clients/client8bw.png) center no-repeat
+    @include mq($until: desktop)
+      background: #ffffff url(../img/clients/client8col.png) no-repeat center
+      background-size: 90% auto !important
+  .client9
+    background: #ffffff url(../img/clients/client9bw.png) center no-repeat
+    @include mq($until: desktop)
+      background: #ffffff url(../img/clients/client9col.png) no-repeat center
+      background-size: 35% auto !important
+  .client10
+    background: #ffffff url(../img/clients/client10bw.png) center no-repeat
+    @include mq($until: desktop)
+      background: #ffffff url(../img/clients/client10col.png) no-repeat center
+      background-size: 90% auto !important
+  .client11
+    background: #ffffff url(../img/clients/client11bw.png) center no-repeat
+    @include mq($until: desktop)
+      background: #ffffff url(../img/clients/client11col.png) no-repeat center
+      background-size: 80% auto !important
+  .client12
+    background: #ffffff url(../img/clients/client12bw.png) center no-repeat
+    @include mq($until: desktop)
+      background: #ffffff url(../img/clients/client12col.png) no-repeat center
+      background-size: 70% auto !important
+      
+  
+.client-cont
+  display: flex
+  flex-wrap: wrap
+  .row1, .row2, .row3, .row4, .row5, .row6, .row7
+    display: flex
+    flex-wrap: wrap
+    &:first-child
+      margin-right: 30px

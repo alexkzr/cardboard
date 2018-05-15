@@ -1,0 +1,90 @@
+.products
+  display: flex
+  flex-direction: column
+  .section-heading
+    @include mq($from: desktop)
+      margin-top: 55px
+    @include mq($until: desktop)
+      margin-top: 30px
+  &-container
+    display: flex
+    flex-wrap: wrap
+    .row1, .row2
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      width: 80%
+      @include mq($from: mobile, $until: mobile-wide)
+        width: 100%
+        @include push--auto
+      @include mq($until: desktop-special)
+        @include push--auto
+        width: 100%
+    .prod1 img, .prod2 img, .prod3 img, .prod4 img
+      margin-bottom: 20px
+    .prod1, .prod2, .prod3, .prod4
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      margin-bottom: 50px
+      @include mq($until: desktop)
+        width: 90%
+      .buttons  
+        display: flex
+        flex-direction: row
+        @include mq($until: mobile-wide)
+          @include push--sides(auto)
+      .product-name
+        color: $scnd-text-color
+        font-family: $roboto
+        font-size: 20px
+        font-weight: 300
+        line-height: 19.99px
+        text-align: center
+        align-self: flex-end
+        margin-bottom: 30px
+        @include push--sides(auto)
+    .prod3
+      .product-name
+        margin-bottom: 30px
+        @include mq($until: desktop)
+          margin-bottom: 30px
+
+    .more
+      width: 128px
+      height: 48px
+      border: 1px solid #373737
+      opacity: 0.5
+      color: $scnd-text-color
+      font-family: $roboto
+      border-radius: 5px
+      outline:none
+      background: #ffffff
+      margin-right: 12px
+      cursor: pointer
+      @include mq($until: mobile-wide)
+        width: 120px
+        
+    .more:hover
+      background: darken(#ffffff, 10)
+    .order
+      width: 173px
+      height: 48px
+      color: #ffffff
+      font-family: $roboto
+      font-size: 15px
+      font-weight: 400
+      line-height: 23.47px
+      background: $main-yellow
+      border-radius: 5px
+      outline: none
+      cursor: pointer
+      @include mq($until: mobile-wide)
+        width: 161px
+        padding: 0
+        outline: none
+    .order:focus
+      outline: none
+      border: none
+
+

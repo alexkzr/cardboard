@@ -1,0 +1,33 @@
+@media (max-width: 1199px)
+  .main
+    .container
+      .row
+        margin-right: 0
+    &-form
+      form
+      &__tel
+        flex-basis: 65%
+      .button-big
+        margin-left: 10px
+        padding: 10px 15px
+@media (min-width: 992px)
+  .slider-arrow__left:hover
+    background: $main-yellow url(../img/slider/arrow-left-active.png) no-repeat center
+    transform: rotate(180deg)
+  .slider-arrow__right:hover
+    background: $main-yellow url(../img/slider/arrow-left-active.png) no-repeat center
+    transform: rotate(360deg)
+  .slider-feed_right:hover 
+    background: url(../img/slider/arrow-right.png) center no-repeat 
+    transform: rotate(180deg)
+    border: none
+    @include mq($until: tablet)
+      background-color: #fff
+      border: 1px solid $main-yellow
+  .slider-feed_left:hover
+    background: url(../img/slider/arrow-left.png) center no-repeat  
+    transform: rotate(360deg)
+    border: none
+    @include mq($until: tablet)
+      background-color: #fff
+      border: 1px solid $main-yellow

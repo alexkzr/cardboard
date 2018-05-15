@@ -1,0 +1,42 @@
+* {
+  margin: 0 auto; }
+
+button:focus {
+  outline: none; }
+
+.header {
+  margin-top: 50px;
+  font-family: 'Roboto-Regular', sans-serif; }
+  .header .header-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+  .header .header-text__phone1, .header .header-text__phone2 {
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #373737;
+    margin: 13px; }
+  .header .header-text__phone2 {
+    margin-left: 0; }
+  .header .header-text__phone1 {
+    padding-right: 13px;
+    border-right: 1px solid #cfcfd0; }
+  .header .header-text__call {
+    background-color: #ff9d00;
+    border-radius: 5px;
+    border: 0 solid transparent; }
+    .header .header-text__call:hover {
+      background-color: #ffa71a; }
+    .header .header-text__call a {
+      padding: 18px 22px; }
+
+img {
+  max-width: 100px; }
+
+.wrapper {
+  max-width: 950px; }

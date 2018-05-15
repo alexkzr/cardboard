@@ -1,0 +1,159 @@
+a
+  text-decoration: none
+  color: $main-text-color
+.maps
+  position: relative
+  .map-info
+    background: salmon
+    position: absolute
+    width: 313px
+    height: 390px
+    background-color: #fff
+    left: 190px
+    top: 73px
+    border-radius: 5px
+    @include mq($until: desktop)
+      left: 50px
+    @include mq($until: tablet)
+       display: none
+  
+    p
+      font-size: 16px
+      padding-top: 0
+      padding-bottom: 13px
+      margin-top: -5px;
+      letter-spacing: -0.2px;
+    .first
+      padding-bottom: 0
+    .second
+      margin-top: 0
+    .map-phones:last-child
+      padding-top: 0
+      padding-bottom: 0
+    .map__address
+      padding-top: 33px
+      .call-button
+        margin-left: 64px
+      .map-heading2
+        margin-left: 64px
+        margin-top: -4px
+        p
+          padding-bottom: 31px
+    .map_heading
+      font-family: $roboto-bold
+      font-size: 18px
+      line-height: 18px
+    .button
+      background: $main-yellow
+      @include push--sides(auto)
+      color: #ffffff
+      outline: none
+      font-size: 14px
+      margin-left: 64px
+      margin-top: 0
+      padding: 10px 22px
+    .button:focus
+      outline: none  
+    .call-button:hover
+      background: lighten($main-yellow, 10)
+    .map-email
+      padding-top: 25px
+    .map-phones
+      margin-top: 15px
+    .map__address, .map-phones, .map-email
+      clear: both
+      img, h4
+        margin-left: 34px
+        margin-right: 13px
+      a
+        text-decoration: none
+      p
+        margin-left: 64px
+        margin-top: -4px;
+        letter-spacing: -0.1px;
+      img
+        float: left
+      
+#map
+  @include mq($until: tablet)
+    @include soft--sides(15px)
+    padding-bottom: 15px
+
+.contacts-hidden
+  @include mq($from: tablet)
+    display: none
+    width: 100vw
+  .wide-hidden
+    text-align: center
+    h2
+      font-weight: 700
+      margin-bottom: 19px
+      margin-top: 36px
+      @extend .section__heading
+      font-family: $roboto-bold
+      font-size: 22px
+      text-align: center
+      font-weight: 700
+      line-height: 24px
+      margin-top: 14px
+    .sales
+      margin-top: 32px
+    h4
+      font-size: 18px
+      font-weight: 500
+      font-family: $roboto-bold
+    .mt14
+      margin-top: 14px
+    a
+      text-decoration: none
+      color: $main-text-color
+      p
+        font-size: 14px
+        letter-spacing: -0.2px;
+        text-align: center
+        margin-top: 10px
+    .email
+      margin-bottom: 28px
+      margin-top: 0
+    .button
+      background: $main-yellow
+      @include push--sides(auto)
+      color: #ffffff
+      outline: none
+      font-size: 14px
+      margin-top: 15px
+      margin-bottom: 21px
+      padding: 10px 22px
+    .button:focus
+      outline: none  
+    .button:hover
+      background: lighten($main-yellow, 10)
+.ymaps-2-1-64-copyright__content
+  margin-top: -4px
+.wrapper
+  width: 100%
+.footer
+  display: flex
+  @include push--ends(auto)
+  min-height: 88px
+  text-align: center
+  width: 100%
+  background: #1b1b1b
+  color: #484848
+  font-size: 13px
+  @include mq($until: tablet)
+    font-size: 11px
+  p
+    @include push--sides(auto)
+    @include push--ends(auto)
+    a 
+      display: inline-block
+      text-decoration: none
+      color: #484848
+      margin: 0
+
+.popup-main
+  @include push--ends(auto)
+.popup-title
+.popup-title__font
+  display: block

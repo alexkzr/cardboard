@@ -1,0 +1,106 @@
+.container
+  padding: 0
+.hamburger
+  @include mq($from: desktop)
+    display: none
+.phone-bold
+  font-family: $roboto-black 
+.hamburger:focus
+  outline: none
+.hamburger
+  outline: none
+  @include mq($until: tablet)
+    position: fixed
+    top: 0
+  @include mq($until: desktop)
+    position: fixed
+  @include mq($until: mobile-wide)
+    position: fixed
+    top: -2px
+.menu
+  max-width: 1140px
+  @include mq($until: tablet)
+  margin-top: 0
+  .hidden-mobile
+    padding-left: 0
+
+  font-family: 'Roboto-Regular', sans-serif
+.header
+  position: relative
+  margin-top: 100px
+  @include mq($from: tablet)
+    margin-top: 70px
+    margin-bottom: 30px
+  @include mq($from: tablet, $until: desktop)
+    margin-top: 30px
+  @include mq($from: mobile-wide, $until: tablet)
+    margin-top: 0
+    padding-top: 0
+  @include mq($until: mobile-wide)
+    padding-top: 15px
+  &-logo
+    position: absolute
+    margin-bottom: 15px
+    @include mq($from: desktop)
+      top: -6px
+    @include mq($until: desktop)
+      top: -2px
+    @include mq($from: mobile-wide)
+      left: 15px
+    @include mq($from: tablet)
+      left: 30px
+    @include mq($until: mobile-wide)
+      top: -6px
+      left: 50px
+  &-text
+    display: flex
+    justify-content: flex-end
+    &__phones
+      display: flex
+      flex-direction: row
+      align-items: center
+      @include mq($from: desktop)
+        margin-right: 30px
+      a
+        color: $main-text-color
+        .phone-bold
+          font-family: $roboto
+          @include mq($until: mobile-wide)
+            font-family: $roboto-black
+          color: $main-text-color
+          font-weight: 500
+      a:hover
+        cursor: pointer
+    &__phone1, &__phone2
+      font-family: 'Roboto-Regular', sans-serif
+      font-size: 22px
+      font-weight: 500
+      line-height: 22px
+      color: #373737
+      margin: 13px
+      a
+        text-decoration: none
+    &__phone2
+      margin-left: 0
+      margin-right: 0
+    &__phone1
+      padding-right: 13px
+      border-right: 1px solid #cfcfd0
+  &__call
+    background-color: $main-yellow
+    border-radius: 5px
+    padding: 0 20px
+    border: 0 solid transparent
+    font-family: 'Roboto-Regular', sans-serif
+    color: #ffffff
+    font-size: 14px
+    font-weight: 500
+    line-height: 22px
+    margin-left: 27px
+    cursor: pointer
+    a
+      padding: 18px 22px
+      
+@media (min-width: 992px)
+  .button:hover
+    background: lighten($main-yellow, 10)

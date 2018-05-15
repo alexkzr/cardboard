@@ -1,0 +1,115 @@
+@media (max-width: 575px)
+  .hidden-mobile
+    display: none
+  .new-line
+    display: inline-block
+  .button
+    margin: 0
+
+  .row
+    margin-left: auto
+    margin-right: auto
+  .header
+    margin-top: -15px
+    background: #f4f4f4
+    &-logo
+      width: 35px
+      height: 35px
+      background: url(../img/logo-sm.png) center no-repeat
+      margin: 16px 0
+    &-text
+      height: 55px
+      display: flex
+      justify-content: flex-end
+      &__phones
+        display: flex
+        flex-direction: column
+        justify-content: center
+        margin-right: 15px
+        .phone-bold
+          font-family: $roboto-black 
+        .header-text__phone1, 
+        .header-text__phone2
+          font-family: $roboto
+          font-size: 14px
+          font-weight: 400
+          line-height: 17px
+          text-transform: uppercase
+          border: none
+          margin: 0
+        .header-text__phone2
+          margin-left: 0
+        .header-text__phone1
+          padding-right: 0
+          border-right: none
+      &__call
+        width: 35px 
+        height: 35px
+        margin: 0
+        padding: 0
+        background: $main-yellow url(../img/phone-ico.png) no-repeat center
+        img
+          width: 27px 
+          height: 27px
+          margin: 0
+          padding: 0
+  .main, .main-double
+    padding-top: 0
+    min-height: 320px
+    padding-bottom: 0
+    &-text
+      margin-top: 50px
+      text-align: center
+      padding-bottom: 0
+      &__title
+        color: $main-yellow
+        font-size: 22px
+        letter-spacing: .5px
+        font-weight: 500
+      &__subtitle
+        color: #fff
+        font-weight: 400
+        font-size: 18px
+    &-form
+      text-align: center
+      background: none
+      padding-left: 0
+      padding-right: 0
+      &__tel
+        margin-left: 50px
+        margin-right: 50px
+      &__tel::placeholder
+        font-size: 13px
+        font-weight: 300
+        text-align: center
+      &__heading
+        line-height: 18px
+      &__asterisk
+        font-size: 13px
+        margin-left: 0
+      form
+        display: flex
+        flex-direction: column
+        .button-big
+          width: 180px
+          height: 51px
+          margin-left: auto
+          margin-right: auto
+          font-size: 15px
+          margin-top: 10px
+          justify-content: center
+        .button
+          
+      &__heading
+        font-size: 15px
+        font-weight: 300
+        .bold
+          font-weight: 700
+          text-transform: uppercase
+          padding-top: 10px
+@media (max-width: 320px)
+  .main
+    &-form
+      &__tel
+        margin: 0
+        letter-spacing: -0.2px;

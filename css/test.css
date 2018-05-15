@@ -1,0 +1,35 @@
+img {
+  max-width: 100%;
+}
+
+.production {
+  padding-top: 87px;
+  padding-bottom: 90px;
+}
+.slider-arrow__left {
+  background: url(../img/slider/arrow-left.png) no-repeat center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 80px;
+  border: 1px solid #ff9d00;
+  z-index: 3;
+}
+.slider-arrow__left:hover {
+  background: #ff9d00 url(../img/slider/arrow-left-active.png) no-repeat center;
+  transform: rotate(180deg);
+}
+.slider-arrow__right {
+  background: url(../img/slider/arrow-left.png) no-repeat center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 80px;
+  border: 1px solid #ff9d00;
+  transform: rotate(180deg);
+}
+.slider-arrow__right:hover {
+  background: #ff9d00 url(../img/slider/arrow-left-active.png) no-repeat center;
+}

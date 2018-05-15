@@ -1,0 +1,46 @@
+@import 'mq'
+@import 'mixin'
+@import 'variables'
+@import 'reset'
+@import 'nav'
+@import 'header'
+@import 'modal' 
+@import 'main'
+@import 'features'
+@import 'products'
+@import 'clients'
+@import 'production'
+@import 'feedback'
+@import 'footer'
+@import 'media1200'
+@import 'media992'
+@import 'media768'
+@import 'media576'
+.section__heading
+  margin-bottom: 12px
+  font-family: $roboto-bold
+  text-align: center
+  text-transform: uppercase
+  font-size: 27px
+  @include mq($from: desktop)
+    margin-top: 55px
+  @include mq($until: desktop)
+    margin-top: 30px
+    font-size: 22px
+.section_line
+  margin-bottom: 30px
+  width: 42px
+button:focus
+  outline: none
+  border: none
+button:active
+  outline: none
+  border: none
+
+input:not(output):-moz-ui-invalid 
+  box-shadow: 0 0 1.5px 1px red
+
+
+input:not(output):-moz-ui-invalid:-moz-focusring 
+  box-shadow: 0 0 2px 2px rgba(255,0,0,0.4)
+
